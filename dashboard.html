@@ -15,7 +15,6 @@
     - favicon
   -->
     <link rel="shortcut icon" href="GG LOGO.png" type="image/svg+xml" />
-    <link rel="shortcut icon" href="IMAGE_ROUND.png" type="image/svg+xml" />
 
     <!-- 
     - custom css link
@@ -37,8 +36,9 @@
   -->
     <link rel="preload" as="image" href="./assets/images/backg2.jpg" />
   </head>
-  <script></script>
+
   <body>
+    <!-- HTML -->
     <div class="loading-screen" id="loading-screen">
       <!-- HTML for the Loading Screen -->
       <div class="loading-screen">
@@ -51,7 +51,7 @@
     <!-- Your Main Content -->
     <div id="main-content" style="display: none">
       <!-- JavaScript for delay -->
-      <script>
+      <script async>
         // Delay before hiding the loading screen and showing main content
         window.addEventListener("load", function () {
           setTimeout(function () {
@@ -60,20 +60,6 @@
           }, 6000); // 3000ms = 3 seconds
         });
       </script>
-
-      <div class="ven" id="ven">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <div class="in">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="inp"
-            placeholder="Search here"
-          />
-          <button class="btn" type="submit">Search</button>
-        </div>
-      </div>
 
       <!-- 
     - #HEADER
@@ -144,7 +130,7 @@
                 src="GG LOGO.png"
                 width="216"
                 height="80"
-                alt="G.G.E.C home"
+                alt="G.G.E.C.L home"
                 class="w-100"
               />
             </a>
@@ -188,17 +174,9 @@
 
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
-                class="btn btn-primary"
                 >Apply Now</a
               >
             </nav>
-            <button
-              class="search-bar"
-              id="searchTogg"
-              style="position: absolute; top: initial; right: 16%"
-            >
-              <ion-icon name="search-outline" class="search-icon"></ion-icon>
-            </button>
             <button
               class="nav-open-btn"
               aria-label="open menu"
@@ -210,124 +188,357 @@
           </div>
         </div>
       </header>
+      <br /><br /><br /><br />
 
-      <main>
-        <article>
-          <br /><br /><br />
-          <div class="bill">
-            <div class="chatbox">
-              <div class="chatbox-header">
-                <h2 class="chat-title">Contact Us</h2>
-                <button class="close-chat">X</button>
+      <style>
+        .rof {
+          color: #ffffff;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        /* Table Styling */
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          background-color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+        th,
+        td {
+          padding: 15px;
+          text-align: left;
+        }
+        th {
+          background-color: hsl(210, 71%, 16%);
+          color: #fff;
+          font-weight: 600;
+        }
+        td {
+          color: #666;
+        }
+
+        /* Hover Effect on Rows */
+        tbody tr {
+          transition: background-color 0.3s ease;
+        }
+        tbody tr:hover {
+          background-color: #fafafa;
+        }
+
+        /* Responsive Table Styling */
+        @media (max-width: 768px) {
+          table,
+          thead,
+          tbody,
+          th,
+          td,
+          tr {
+            display: block;
+            width: 100%;
+            padding: 10px;
+          }
+          thead {
+            display: none;
+          }
+          tr {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+          }
+          td {
+            padding: 10px;
+            text-align: right;
+            position: relative;
+            font-size: 16px;
+            font-weight: 800;
+          }
+          td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            color: #252531;
+          }
+        }
+        /* Container for the form */
+        #blog-post-form {
+          max-width: 100%;
+          margin: 20px auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+          font-family: Arial, sans-serif;
+        }
+
+        /* Form Group */
+        .form-group {
+          margin-bottom: 15px;
+        }
+
+        /* Labels */
+        .form-group label {
+          font-weight: bold;
+          color: #333;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        /* Inputs, Textarea, and Select */
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="date"],
+        .form-group input[type="file"],
+        .form-group textarea {
+          width: 100%;
+          padding: 17px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1.3rem;
+        }
+
+        /* Textarea */
+        .form-group textarea {
+          resize: vertical;
+          min-height: 80px;
+        }
+
+        /* Submit Button */
+        button[type="submit"] {
+          width: 100%;
+          padding: 12px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: #fff;
+          background: linear-gradient(90deg, #00aaff, #0066ff);
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+          background: linear-gradient(90deg, #0066ff, #00aaff);
+        }
+
+        /* Input Hover and Focus Effects */
+        .form-group input[type="text"]:focus,
+        .form-group input[type="number"]:focus,
+        .form-group input[type="date"]:focus,
+        .form-group input[type="file"]:focus,
+        .form-group textarea:focus {
+          border-color: #0066ff;
+          outline: none;
+          box-shadow: 0 0 5px rgba(0, 102, 255, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+          #blog-post-form {
+            padding: 15px;
+          }
+
+          button[type="submit"] {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
+      </style>
+      <article>
+        <div
+          class="admin-input"
+          style="margin: 0; width: 100%; padding-left: 10px"
+          id="admin-token-div"
+        >
+          <input
+            type="text"
+            id="admin-token"
+            style="margin: 0"
+            placeholder="Your admin token"
+          />
+          <button id="token-btn">Access</button>
+        </div>
+        <main>
+          <div class="blog_upload_section">
+            <form id="blog-post-form" class="blog-post-form">
+              <!-- Blog Title -->
+              <div class="form-group">
+                <label for="title">Blog Title</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Enter blog title"
+                />
               </div>
 
-              <form class="contact-form" id="contact-form-live">
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
+              <!-- Blog Excerpt -->
+              <div class="form-group">
+                <label for="excerpt">Blog Excerpt</label>
+                <textarea
+                  id="excerpt"
+                  name="excerpt"
+                  rows="2"
+                  placeholder="Enter a short excerpt"
+                  maxlength="100"
+                ></textarea>
+              </div>
 
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
+              <!-- Blog Content -->
+              <div class="form-group">
+                <label for="content">Blog Content</label>
+                <textarea
+                  id="content"
+                  name="content"
+                  rows="5"
+                  placeholder="Enter the full blog content"
+                ></textarea>
+              </div>
 
-                <div class="form-group">
-                  <label for="subject">Subject:</label>
-                  <input type="text" id="subject" name="subject" required />
-                </div>
+              <!-- Blog Image -->
+              <div class="form-group">
+                <label for="image">Blog Image</label>
+                <input type="file" id="image" name="image" accept="image/*" />
+              </div>
 
-                <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
+              <!-- Blog Category -->
+              <div class="form-group">
+                <label for="category">Category</label>
+                <input
+                  type="text"
+                  id="category"
+                  name="category"
+                  placeholder="Enter category (e.g., Study Abroad)"
+                />
+              </div>
 
-                <button class="send-btn">Send</button>
-              </form>
-            </div>
+              <!-- Blog Author -->
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input
+                  type="text"
+                  id="author"
+                  name="author"
+                  placeholder="Enter author name"
+                />
+              </div>
+
+              <!-- Estimated Reading Time -->
+              <div class="form-group">
+                <label for="reading-time"
+                  >Estimated Reading Time (minutes)</label
+                >
+                <input
+                  type="number"
+                  id="reading-time"
+                  name="readingTime"
+                  placeholder="e.g., 5"
+                  min="1"
+                />
+              </div>
+
+              <!-- Views and Comments -->
+              <div class="form-group">
+                <label for="views">Initial Views</label>
+                <input
+                  type="number"
+                  id="views"
+                  name="views"
+                  placeholder="e.g., 0"
+                  min="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comments">Initial Comments</label>
+                <input
+                  type="number"
+                  id="comments"
+                  name="comments"
+                  placeholder="e.g., 0"
+                  min="0"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit">Publish Blog Post</button>
+            </form>
           </div>
 
-          <style>
-            .bill {
-              width: 100%;
-              border: 1px solid #ccc;
-              border-radius: 8px;
-              background-color: #fff;
-              overflow: hidden;
-              padding: 80px 20px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-            .chatbox {
-              width: 700px;
-              box-shadow: 0 0 3px rgba(12, 12, 12, 0.488);
-            }
-            .chatbox-header {
-              background-color: hsl(210, 65%, 20%);
-              color: white;
-              padding: 15px;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-            }
+          <div class="comment-section">
+            <h2 class="rof">User's Comments/informations</h2>
 
-            .chat-title {
-              font-size: 18px;
-            }
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Sample Row 1 -->
+                <tr>
+                  <td class="userName" id="username">jane.doe@example.com</td>
+                  <td class="Email" id="Email">
+                    Loved this app! Very user-friendly and efficient.
+                  </td>
+                  <td class="Subject" id="Subject">2024-11-01</td>
+                  <td class="Date" id="Date">09:15</td>
+                </tr>
+                <!-- Sample Row 2 -->
+                <tr>
+                  <td class="userName" id="username">john.smith@example.com</td>
+                  <td class="Email" id="Email">
+                    Would love to see more features in future upSubjects!
+                  </td>
+                  <td class="Subject" id="Subject">2024-11-01</td>
+                  <td class="Date" id="Date">12:45</td>
+                </tr>
+                <!-- Sample Row 3 -->
+                <tr>
+                  <td class="userName" id="username">alex.jones@example.com</td>
+                  <td class="Email" id="Email">
+                    Had some issues with loading times, but overall good.
+                  </td>
+                  <td class="Subject" id="Subject">2024-11-02</td>
+                  <td class="Date" id="Date">15:30</td>
+                </tr>
+                <!-- Sample Row 4 -->
+                <tr>
+                  <td class="userName" id="username">sara.lane@example.com</td>
+                  <td class="Email" id="Email">
+                    Fantastic app! The design is beautiful and functional.
+                  </td>
+                  <td class="Subject" id="Subject">2024-11-02</td>
+                  <td class="Date" id="Date">18:10</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </article>
 
-            .close-chat {
-              background: none;
-              border: none;
-              color: white;
-              font-size: 20px;
-              cursor: pointer;
-            }
+      <script async>
+        // Open overlay
+        // document.getElementById("searchTogg").addEventListener("click", () => {
+        //   var ven = document.getElementById("ven");
+        //   ven.classList.add("active");
+        //   document.body.classList.add("no-scroll");
+        // });
 
-            .contact-form {
-              padding: 15px;
-              display: flex;
-              flex-direction: column;
-            }
-
-            .form-group {
-              margin-bottom: 15px;
-            }
-
-            label {
-              margin-bottom: 5px;
-              font-weight: bold;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            textarea {
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            }
-
-            textarea {
-              resize: vertical; /* Allow vertical resizing */
-            }
-
-            .send-btn {
-              background-color: hsl(210, 65%, 20%);
-              color: white;
-              border: none;
-              border-radius: 4px;
-              padding: 10px;
-              cursor: pointer;
-            }
-          </style>
-        </article>
-      </main>
+        // Close overlay
+        // document.getElementById("closeBtn").addEventListener("click", () => {
+        //   var ven = document.getElementById("ven");
+        //   ven.classList.remove("active");
+        //   document.body.classList.remove("no-scroll");
+        // });
+      </script>
 
       <!-- 
     - #FOOTER
@@ -355,6 +566,7 @@
                   >G.G.E.C.L</b
                 >
               </p>
+
               <p class="footer-text">
                 Begin your study abroad journey with ease—secure, reliable, and
                 tailored support every step of the way.
@@ -651,38 +863,25 @@
           </div>
         </div>
       </footer>
-      <script>
-        // Open overlay
-        document.getElementById("searchTogg").addEventListener("click", () => {
-          var ven = document.getElementById("ven");
-          ven.classList.add("active");
-          document.body.classList.add("no-scroll");
-        });
-
-        // Close overlay
-        document.getElementById("closeBtn").addEventListener("click", () => {
-          var ven = document.getElementById("ven");
-          ven.classList.remove("active");
-          document.body.classList.remove("no-scroll");
-        });
-      </script>
-      <!-- 
+    </div>
+    <!-- 
     - custom js link
   -->
 
-      <!-- 
+    <!-- 
     - ionicon link
     -->
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-      ></script>
-    </div>
+    <script
+      async
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      async
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script async src="assets/js/script.js"></script>
   </body>
 </html>
