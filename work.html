@@ -1,525 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
+    <!-- 
     - primary meta tags
   -->
-  <title>G.G.E.C.L - Your Gateway to Global Education</title>
-  <meta name="title" content="G.G.E.C.L - Your Gateway to Global Education">
+    <title>G.G.E.C.L - Your Gateway to Global Education</title>
+    <meta name="title" content="G.G.E.C.L - Your Gateway to Global Education" />
 
-  <!-- 
+    <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="GG LOGO.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="GG LOGO.png" type="image/svg+xml" />
 
-  <!-- 
+    <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- 
+    <!-- 
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merienda&family=Oswald:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda&family=Oswald:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- 
+    <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/backg2.jpg">
+    <link rel="preload" as="image" href="./assets/images/backg2.jpg" />
+  </head>
 
-</head>
-
-<body>
-
-
-<!-- HTML -->
-<div class="loading-screen" id="loading-screen">
-  <!-- HTML for the Loading Screen -->
-<div class="loading-screen">
-  <div class="loader">
-    <div class="spinner"></div>
-  </div>
-</div>
-
-</div>
-
-<!-- Your Main Content -->
-<div id="main-content" style="display: none;">
-
-
-<!-- JavaScript for delay -->
-<script>
-  // Delay before hiding the loading screen and showing main content
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.getElementById("loading-screen").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 6000); // 3000ms = 3 seconds
-  });
-</script>
-
-
-  <div class="ven" id="ven">
-    <button class="close-btn" id="closeBtn">&times;</button>
-    <div class="in">
-      <input type="text" name="" id="" class="inp" placeholder="Search here">
-      <button class="btn" type="submit">Search</button>
+  <body>
+    <!-- HTML -->
+    <div class="loading-screen" id="loading-screen">
+      <!-- HTML for the Loading Screen -->
+      <div class="loading-screen">
+        <div class="loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <!-- 
+
+    <!-- Your Main Content -->
+    <div id="main-content" style="display: none">
+      <!-- JavaScript for delay -->
+      <script>
+        // Delay before hiding the loading screen and showing main content
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+          }, 6000); // 3000ms = 3 seconds
+        });
+      </script>
+
+      <div class="ven" id="ven">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div style="width: 100%; display: grid; place-items: center">
+          <div class="in">
+            <input
+              type="text"
+              name=""
+              id="ven-search"
+              class="inp"
+              placeholder="Search here"
+            />
+            <button class="btn" type="submit" id="sch">Search</button>
+          </div>
+          <!-- The search output below, just style -->
+          <div
+            id="show-search"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <!-- 
     - #HEADER
   -->
 
-  <header class="header">
+      <header class="header">
+        <div class="header-top">
+          <div class="container">
+            <p class="header-top-text">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Telephone :</span>
+              <a href="tel:+441135341334">+44 (0)113 534 1334</a>
+            </p>
 
-    <div class="header-top">
-      <div class="container">
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
 
-        <p class="header-top-text">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          <span class="span">Telephone :</span>  <a href="tel:+441135341334">+44 (0)113 534 1334</a>
-        </p>
+              <li>
+                <a href="https://www.x.com/goldengoshenedu" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
 
-        <ul class="social-list">
+              <li>
+                <a
+                  href="http://www.instagram.com/goldengosheneducation"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
 
-          <li>
-            <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
 
-          <li>
-            <a href="https://www.x.com/goldengoshenedu" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+              <li>
+                <a href="https://wa.me/447943477853" class="social-link">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </li>
+            </ul>
 
-          <li>
-            <a href="http://www.instagram.com/goldengosheneducation" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://wa.me/447943477853" class="social-link">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-        <p class="header-top-text">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          148 Rose Bowl, Portland Crescent, United Kingdom.
-        </p>
-
-      </div>
-    </div>
-
-    <div class="header-bottom" data-header>
-      <div class="container">
-
-        <a href="index.html" class="logo">
-          <img loading="eager" src="GG LOGO.png" width="216" height="80" alt="G.G.E.C.L home" class="w-100">
-        </a>
-
-        <nav class="navbar" data-navbar>
-
-          <ul class="navbar-list">
-
-            <li>
-              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-            </li>
-
-            <li>
-              <a href="about.html" class="navbar-link" data-nav-link>About</a>
-            </li>
-
-            <li>
-              <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
-            </li>
-
-            <li>
-              <a href="service.html" class="navbar-link" data-nav-link>Searvices</a>
-            </li>
-
-            <li>
-              <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
-            </li>
-
-            <li>
-              <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
-            </li>
-
-          </ul>
-          
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="btn btn-primary">Apply Now</a>
-
-        </nav>
-        <button class="search-bar" id="searchTogg" style="position: absolute; top: initial; right: 16%;"><ion-icon name="search-outline" class="search-icon"></ion-icon></button>
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-          <span class="span"></span>
-          <span class="span"></span>
-        </button>
-
-      </div>
-    </div>
-
-  </header>
-
-
-
-
-  <script>
-    
-    // Open overlay
-    document.getElementById("searchTogg").addEventListener("click", () => {
-      var ven = document.getElementById("ven");
-      ven.classList.add("active");
-      document.body.classList.add("no-scroll");
-    });
-    
-    // Close overlay
-    document.getElementById("closeBtn").addEventListener("click", () => {
-      var ven = document.getElementById("ven");
-      ven.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    });
-    
-    </script>
-  <main>
-    <article>
-<br><br><br>
-
-<!-- Working Hours Section -->
-<section class="working-hours">
-    <h2 class="hours-title">Working Hours</h2>
-    <ul class="hours-list">
-      <li><span>Monday</span><span>9:00AM - 6:00PM</span></li>
-      <li><span>Tuesday</span><span>9:00AM - 6:00PM</span></li>
-      <li><span>Wednesday</span><span>9:00AM - 6:30PM</span></li>
-      <li><span>Thursday</span><span>10:00AM - 6:00PM</span></li>
-      <li><span>Friday</span><span>10:00AM - 5:00PM</span></li>
-    </ul>
-  </section>
-  
-
-<!-- CONTACT US SECTION -->
-<section class="contact-us-section">
-  <h2 class="contact-title">Get in Touch with Us</h2>
-  <div class="contact-container">
-    
-    <!-- Contact Info Section -->
-    <div class="contact-info-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <ion-icon name="call-outline"></ion-icon>
-          <p>+44 20 1234 5678</p>
+            <p class="header-top-text">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              148 Rose Bowl, Portland Crescent, United Kingdom.
+            </p>
+          </div>
         </div>
-        <div class="contact-item">
-          <ion-icon name="mail-outline"></ion-icon>
-          <p>info@ourcompany.com</p>
+
+        <div class="header-bottom" data-header>
+          <div class="container">
+            <a href="index.html" class="logo">
+              <img
+                loading="eager"
+                src="GG LOGO.png"
+                width="216"
+                height="80"
+                alt="G.G.E.C home"
+                class="w-100"
+              />
+            </a>
+
+            <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+                <li>
+                  <a href="index.html" class="navbar-link" data-nav-link
+                    >Home</a
+                  >
+                </li>
+
+                <li>
+                  <a href="about.html" class="navbar-link" data-nav-link
+                    >About</a
+                  >
+                </li>
+
+                <li>
+                  <a href="live.html" class="navbar-link" data-nav-link
+                    >Live chat</a
+                  >
+                </li>
+
+                <li>
+                  <a href="service.html" class="navbar-link" data-nav-link
+                    >Searvices</a
+                  >
+                </li>
+
+                <li>
+                  <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+                </li>
+
+                <li>
+                  <a href="contact.html" class="navbar-link" data-nav-link
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                class="btn btn-primary"
+                >Apply Now</a
+              >
+            </nav>
+            <button
+              class="search-bar"
+              id="searchTogg"
+              style="position: absolute; top: initial; right: 16%"
+            >
+              <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            </button>
+            <button
+              class="nav-open-btn"
+              aria-label="open menu"
+              data-nav-toggler
+            >
+              <span class="span"></span>
+              <span class="span"></span>
+            </button>
+          </div>
         </div>
-        <div class="contact-item">
-          <ion-icon name="location-outline"></ion-icon>
-          <p>148 Rose Bowl, Portland Crescent, Leeds, LS1 3HB, UK</p>
-        </div>
-      </div>
-    </div>
+      </header>
 
-    <!-- Form Section -->
-    <div class="contact-form-container">
-      <form class="contact-form" action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        
-        <button type="submit" class="contact-submit-button">Send Message</button>
-      </form>
-    </div>
+      <script>
+        // Open overlay
+        document.getElementById("searchTogg").addEventListener("click", () => {
+          var ven = document.getElementById("ven");
+          ven.classList.add("active");
+          document.body.classList.add("no-scroll");
+        });
 
-  </div>
-</section>
+        // Close overlay
+        document.getElementById("closeBtn").addEventListener("click", () => {
+          var ven = document.getElementById("ven");
+          ven.classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        });
+      </script>
+      <main>
+        <article>
+          <br /><br /><br />
 
+          <!-- Working Hours Section -->
+          <section class="working-hours">
+            <h2 class="hours-title">Working Hours</h2>
+            <ul class="hours-list">
+              <li><span>Monday</span><span>9:00AM - 6:00PM</span></li>
+              <li><span>Tuesday</span><span>9:00AM - 6:00PM</span></li>
+              <li><span>Wednesday</span><span>9:00AM - 6:30PM</span></li>
+              <li><span>Thursday</span><span>10:00AM - 6:00PM</span></li>
+              <li><span>Friday</span><span>10:00AM - 5:00PM</span></li>
+            </ul>
+          </section>
 
+          <!-- CONTACT US SECTION -->
+          <section class="contact-us-section">
+            <h2 class="contact-title">Get in Touch with Us</h2>
+            <div class="contact-container">
+              <!-- Contact Info Section -->
+              <div class="contact-info-container">
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p>+44 20 1234 5678</p>
+                  </div>
+                  <div class="contact-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p>info@ourcompany.com</p>
+                  </div>
+                  <div class="contact-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p>148 Rose Bowl, Portland Crescent, Leeds, LS1 3HB, UK</p>
+                  </div>
+                </div>
+              </div>
 
-    </article>
-  </main>
+              <!-- Form Section -->
+              <div class="contact-form-container">
+                <form class="contact-form" id="contact-form">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
 
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
 
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
 
-  <!-- 
+                  <button class="contact-submit-button">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-top section">
-
-        <div class="footer-brand" style="max-width: 300px;">
-
-          <p class="footer-list-title" style="justify-content: flex-start;display: flex;text-align: center;align-content:flex-start;"><img loading="eager" src="GG LOGO.png" alt="" style="width: 70px; height: auto;"><b class="io" style="margin-top: 5%; margin-left: 10px;">G.G.E.C.L</b></p>
-
-          <p class="footer-text">
-            Begin your study abroad journey with ease—secure, reliable, and tailored support every step of the way.
-        </p>
-        
-
-          <ul class="social-list">
-
-            <li>
-              <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.x.com/goldengoshenedu" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="http://www.instagram.com/goldengosheneducation" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-        
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Usefull Links</p>
-          </li>
-
-          <li>
-            <a href="about.html" class="footer-link">About us</a>
-          </li>
-
-          <li>
-            <a href="service.html" class="footer-link">Services</a>
-          </li>
-
-          <li>
-            <a href="course.html" class="footer-link">Courses</a>
-          </li>
-
-
-          <li>
-            <a href="terms.html" class="footer-link">Terms & Services</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Community</p>
-          </li>
-
-          <li>
-            <a href="faq.html" class="footer-link">FAQs</a>
-          </li>
-
-          <li>
-            <a href="live.html" class="footer-link">Call us now</a>
-          </li>
-
-          <li>
-            <a href="work.html" class="footer-link">Work hours</a>
-          </li>
-
-          <li>
-            <a href="blog.html" class="footer-link">Blog</a>
-          </li>
-
-        </ul>
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Location</p>
-          </li>
-            <p class="dev">University Business Centre- Leeds,
-              148 Rose Bowl, Portland Crescent,
-              LS1 3HB Leeds, United Kingdom.
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top section">
+            <div class="footer-brand" style="max-width: 300px">
+              <p
+                class="footer-list-title"
+                style="
+                  justify-content: flex-start;
+                  display: flex;
+                  text-align: center;
+                  align-content: flex-start;
+                "
+              >
+                <img
+                  loading="eager"
+                  src="GG LOGO.png"
+                  alt=""
+                  style="width: 70px; height: auto"
+                /><b class="io" style="margin-top: 5%; margin-left: 10px"
+                  >G.G.E.C.L</b
+                >
               </p>
 
-        </ul>
-        <ul class="footer-list">
+              <p class="footer-text">
+                Begin your study abroad journey with ease—secure, reliable, and
+                tailored support every step of the way.
+              </p>
 
-          <li>
-            <p class="footer-list-title">Instagram post</p>
-          </li>
-
-          <li>
-            <ul class="insta-post">
-
-              <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i1.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+              <ul class="social-list">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
+                </li>
 
-                </div>
+                <li>
+                  <a
+                    href="https://www.x.com/goldengoshenedu"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="http://www.instagram.com/goldengosheneducation"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Usefull Links</p>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i2.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="about.html" class="footer-link">About us</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i3.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="service.html" class="footer-link">Services</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i4.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="course.html" class="footer-link">Courses</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i5.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="terms.html" class="footer-link">Terms & Services</a>
               </li>
-
-              <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i6.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
-              </li>
-
             </ul>
-          </li>
 
-        </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Community</p>
+              </li>
 
-      </div>
-      <hr style="border: 1px solid rgb(127, 138, 255);">
+              <li>
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
 
-      <div class="footer-bottom" style="display: flex;justify-content: space-between;">
+              <li>
+                <a href="live.html" class="footer-link">Call us now</a>
+              </li>
 
-        <p class="copyright">
-          &copy; 2024 G.G.E.C.L All Rights Reserved by BiTech
-        </p>
+              <li>
+                <a href="work.html" class="footer-link">Work hours</a>
+              </li>
 
-        <ul class="footer-bottom-list">
+              <li>
+                <a href="blog.html" class="footer-link">Blog</a>
+              </li>
+            </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Location</p>
+              </li>
+              <p class="dev">
+                University Business Centre- Leeds, 148 Rose Bowl, Portland
+                Crescent, LS1 3HB Leeds, United Kingdom.
+              </p>
+            </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Instagram post</p>
+              </li>
 
-          <li>
-            <a href="terms.html" class="footer-bottom-link">Terms and conditions</a>
-          </li>
+              <li>
+                <ul class="insta-post">
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i1.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
-          <li>
-            <a href="privacy.html" class="footer-bottom-link">Privacy policy</a>
-          </li>
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
 
-          <li>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="footer-bottom-link">Login / Signup</a>
-          </li>
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i2.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
-        </ul>
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
 
-      </div>
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i3.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i4.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i5.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i6.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <hr style="border: 1px solid rgb(127, 138, 255)" />
+
+          <div
+            class="footer-bottom"
+            style="display: flex; justify-content: space-between"
+          >
+            <p class="copyright">
+              &copy; 2024 G.G.E.C.L All Rights Reserved by BiTech
+            </p>
+
+            <ul class="footer-bottom-list">
+              <li>
+                <a href="terms.html" class="footer-bottom-link"
+                  >Terms and conditions</a
+                >
+              </li>
+
+              <li>
+                <a href="privacy.html" class="footer-bottom-link"
+                  >Privacy policy</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                  class="footer-bottom-link"
+                  >Login / Signup</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
-</div>
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
-  <!-- 
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

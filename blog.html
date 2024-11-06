@@ -57,15 +57,27 @@
 
       <div class="ven" id="ven">
         <button class="close-btn" id="closeBtn">&times;</button>
-        <div class="in">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="inp"
-            placeholder="Search here"
-          />
-          <button class="btn" type="submit">Search</button>
+        <div style="width: 100%; display: grid; place-items: center">
+          <div class="in">
+            <input
+              type="text"
+              name=""
+              id="ven-search"
+              class="inp"
+              placeholder="Search here"
+            />
+            <button class="btn" type="submit" id="sch">Search</button>
+          </div>
+          <!-- The search output below, just style -->
+          <div
+            id="show-search"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          ></div>
         </div>
       </div>
 
@@ -138,7 +150,7 @@
                 src="GG LOGO.png"
                 width="216"
                 height="80"
-                alt="G.G.E.C.L home"
+                alt="G.G.E.C home"
                 class="w-100"
               />
             </a>
@@ -158,8 +170,8 @@
                 </li>
 
                 <li>
-                  <a href="courses.html" class="navbar-link" data-nav-link
-                    >Courses</a
+                  <a href="live.html" class="navbar-link" data-nav-link
+                    >Live chat</a
                   >
                 </li>
 
@@ -213,7 +225,11 @@
             <!-- Blog Card 1 -->
             <div class="blog-card">
               <div class="blog-card-image">
-                <img src="./assets/images/r2.jpg" alt="Blog Thumbnail" />
+                <img
+                  src="./assets/images/r2.jpg"
+                  alt="Blog Thumbnail"
+                  class="im-sty"
+                />
               </div>
               <div class="blog-card-content">
                 <h2 class="blog-title">How to Study in the UK on a Budget</h2>

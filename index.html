@@ -1,1055 +1,1507 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
+    <!-- 
     - primary meta tags
   -->
-  <title>G.G.E.C.L - Your Gateway to Global Education</title>
-  <meta name="title" content="G.G.E.C.L - Your Gateway to Global Education">
-  
+    <title>G.G.E.C.L - Your Gateway to Global Education</title>
+    <meta name="title" content="G.G.E.C.L - Your Gateway to Global Education" />
 
-  <!-- 
+    <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="GG LOGO.png" type="image/svg+xml">
+    <link rel="shortcut icon" href="GG LOGO.png" type="image/svg+xml" />
 
-  <!-- 
+    <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- 
+    <!-- 
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merienda&family=Oswald:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda&family=Oswald:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- 
+    <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/backg2.jpg">
+    <link rel="preload" as="image" href="./assets/images/backg2.jpg" />
+  </head>
 
-</head>
-
-<body>
-
-
-<!-- HTML -->
-<div class="loading-screen" id="loading-screen">
-  <!-- HTML for the Loading Screen -->
-<div class="loading-screen">
-  <div class="loader">
-    <div class="spinner"></div>
-  </div>
-</div>
-
-</div>
-
-<!-- Your Main Content -->
-<div id="main-content" style="display: none;">
-
-
-<!-- JavaScript for delay -->
-<script>
-  // Delay before hiding the loading screen and showing main content
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.getElementById("loading-screen").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 6000); // 3000ms = 3 seconds
-  });
-</script>
-
-
-  <div class="ven" id="ven">
-    <button class="close-btn" id="closeBtn">&times;</button>
-    <div class="in">
-      <input type="text" name="" id="" class="inp" placeholder="Search here">
-      <button class="btn" type="submit">Search</button>
+  <body>
+    <!-- HTML -->
+    <div class="loading-screen" id="loading-screen">
+      <!-- HTML for the Loading Screen -->
+      <div class="loading-screen">
+        <div class="loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <!-- 
+
+    <!-- Your Main Content -->
+    <div id="main-content" style="display: none">
+      <!-- JavaScript for delay -->
+      <script>
+        // Delay before hiding the loading screen and showing main content
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+          }, 6000); // 3000ms = 3 seconds
+        });
+      </script>
+
+      <div class="ven" id="ven">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div style="width: 100%; display: grid; place-items: center">
+          <div class="in">
+            <input
+              type="text"
+              name=""
+              id="ven-search"
+              class="inp"
+              placeholder="Search here"
+            />
+            <button class="btn" type="submit" id="sch">Search</button>
+          </div>
+          <!-- The search output below, just style -->
+          <div
+            id="show-search"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <!-- 
     - #HEADER
   -->
 
-  <header class="header">
+      <header class="header">
+        <div class="header-top">
+          <div class="container">
+            <p class="header-top-text">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Telephone :</span>
+              <a href="tel:+441135341334">+44 (0)113 534 1334</a>
+            </p>
 
-    <div class="header-top">
-      <div class="container">
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
 
-        <p class="header-top-text">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          <span class="span">Telephone :</span>  <a href="tel:+441135341334">+44 (0)113 534 1334</a>
-        </p>
+              <li>
+                <a href="https://www.x.com/goldengoshenedu" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
 
-        <ul class="social-list">
+              <li>
+                <a
+                  href="http://www.instagram.com/goldengosheneducation"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
 
-          <li>
-            <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                  class="social-link"
+                >
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
 
-          <li>
-            <a href="https://www.x.com/goldengoshenedu" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+              <li>
+                <a href="https://wa.me/447943477853" class="social-link">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </li>
+            </ul>
 
-          <li>
-            <a href="http://www.instagram.com/goldengosheneducation" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://wa.me/447943477853" class="social-link">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-        <p class="header-top-text">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          148 Rose Bowl, Portland Crescent, United Kingdom.
-        </p>
-
-      </div>
-    </div>
-
-    <div class="header-bottom" data-header>
-      <div class="container">
-
-        <a href="index.html" class="logo">
-          <img loading="eager" src="GG LOGO.png" width="216" height="80" alt="G.G.E.C.L home" class="w-100">
-        </a>
-
-        <nav class="navbar" data-navbar>
-
-          <ul class="navbar-list">
-
-            <li>
-              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-            </li>
-
-            <li>
-              <a href="about.html" class="navbar-link" data-nav-link>About</a>
-            </li>
-
-            <li>
-              <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
-            </li>
-
-            <li>
-              <a href="service.html" class="navbar-link" data-nav-link>Searvices</a>
-            </li>
-
-            <li>
-              <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
-            </li>
-
-            <li>
-              <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
-            </li>
-
-          </ul>
-          
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="btn btn-primary">Apply Now</a>
-
-        </nav>
-        <button class="search-bar" id="searchTogg" style="position: absolute; top: initial; right: 16%;"><ion-icon name="search-outline" class="search-icon"></ion-icon></button>
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-          <span class="span"></span>
-          <span class="span"></span>
-        </button>
-
-      </div>
-    </div>
-
-  </header>
-
-
-
-
-
-  <main>
-    <article>
-
-      <!--
-      #HERO SECTION
-      -->
-      <div class="hero-layout">
-        <div class="slider">
-            <div class="slide slide1"></div>
-            <div class="slide slide2"></div>
-            <div class="slide slide3"></div>
-            <div class="slide slide4"></div>
-            <div class="slide slide5"></div>
-        </div>
-        <div class="hero-txt">
-          <h2 class="hero-text-header">Achieve More, Study Abroad</h2>
-
-          <p class="hero-text-subheader">Discover world-class education and a vibrant, diverse culture. Studying Abroad opens doors to top-tier universities, innovative research, and global career prospects.</p>
-      </div>
-      
-    </div>
-    
-    
-
-
-
-      <!--
-      #ABOUT SECTION
-      -->
-      <section class="about-us">
-        <div class="about-content">
-          <h2 class="about-title">About Us</h2>
-          <p class="about-text">
-            Welcome to our platform! We are dedicated to providing top-quality educational experiences to empower learners around the world. Our programs are designed to nurture curiosity, build skills, and foster a community of passionate learners. Join us in shaping the future of education!
-          </p>
-          <p class="about-text">
-            Through our carefully crafted programs, we provide both knowledge and resources to help individuals excel in their personal and professional lives. Dive into our world, where innovation meets education!
-          </p>
-          <a href="about.html" class="learn-more-btn btn">Learn More</a>
-        </div>
-        <!-- About Us Video Section -->
-        <div class="about-image-container">
-          <video src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4" class="about-video" id="aboutVideo"></video>
-          <div class="play-pause-icon" id="playPauseIcon">
-            <ion-icon name="play-circle-outline"></ion-icon>
+            <p class="header-top-text">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              148 Rose Bowl, Portland Crescent, United Kingdom.
+            </p>
           </div>
         </div>
-        
-        </section>
-      
 
+        <div class="header-bottom" data-header>
+          <div class="container">
+            <a href="index.html" class="logo">
+              <img
+                loading="eager"
+                src="GG LOGO.png"
+                width="216"
+                height="80"
+                alt="G.G.E.C home"
+                class="w-100"
+              />
+            </a>
 
+            <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+                <li>
+                  <a href="index.html" class="navbar-link" data-nav-link
+                    >Home</a
+                  >
+                </li>
 
+                <li>
+                  <a href="about.html" class="navbar-link" data-nav-link
+                    >About</a
+                  >
+                </li>
 
+                <li>
+                  <a href="live.html" class="navbar-link" data-nav-link
+                    >Live chat</a
+                  >
+                </li>
 
-      <!-- CTA SECTION -->
-<div class="cta-section">
-  <div class="cta-content">
-    <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
-    <p class="cta-description">Join our community and gain access to world-class resources, expert instructors, and a path to achieving your goals. Don’t wait—enroll now and take the first step!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="cta-button">Apply Now</a>
-  </div>
-</div>
+                <li>
+                  <a href="service.html" class="navbar-link" data-nav-link
+                    >Searvices</a
+                  >
+                </li>
 
+                <li>
+                  <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+                </li>
 
+                <li>
+                  <a href="contact.html" class="navbar-link" data-nav-link
+                    >Contact</a
+                  >
+                </li>
+              </ul>
 
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                class="btn btn-primary"
+                >Apply Now</a
+              >
+            </nav>
+            <button
+              class="search-bar"
+              id="searchTogg"
+              style="position: absolute; top: initial; right: 16%"
+            >
+              <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            </button>
+            <button
+              class="nav-open-btn"
+              aria-label="open menu"
+              data-nav-toggler
+            >
+              <span class="span"></span>
+              <span class="span"></span>
+            </button>
+          </div>
+        </div>
+      </header>
 
-    <!--
+      <main>
+        <article>
+          <!--
+      #HERO SECTION
+      -->
+          <div class="hero-layout">
+            <div class="slider">
+              <div class="slide slide1"></div>
+              <div class="slide slide2"></div>
+              <div class="slide slide3"></div>
+              <div class="slide slide4"></div>
+              <div class="slide slide5"></div>
+            </div>
+            <div class="hero-txt">
+              <h2 class="hero-text-header">Achieve More, Study Abroad</h2>
+
+              <p class="hero-text-subheader">
+                Discover world-class education and a vibrant, diverse culture.
+                Studying Abroad opens doors to top-tier universities, innovative
+                research, and global career prospects.
+              </p>
+            </div>
+          </div>
+
+          <!--
+      #ABOUT SECTION
+      -->
+          <section class="about-us">
+            <div class="about-content">
+              <h2 class="about-title">About Us</h2>
+              <p class="about-text">
+                Welcome to our platform! We are dedicated to providing
+                top-quality educational experiences to empower learners around
+                the world. Our programs are designed to nurture curiosity, build
+                skills, and foster a community of passionate learners. Join us
+                in shaping the future of education!
+              </p>
+              <p class="about-text">
+                Through our carefully crafted programs, we provide both
+                knowledge and resources to help individuals excel in their
+                personal and professional lives. Dive into our world, where
+                innovation meets education!
+              </p>
+              <a href="about.html" class="learn-more-btn btn">Learn More</a>
+            </div>
+            <!-- About Us Video Section -->
+            <div class="about-image-container">
+              <video
+                src="video/WhatsApp Video 2024-09-16 at 11.48.00_dc272547.mp4"
+                class="about-video"
+                id="aboutVideo"
+              ></video>
+              <div class="play-pause-icon" id="playPauseIcon">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA SECTION -->
+          <div class="cta-section">
+            <div class="cta-content">
+              <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
+              <p class="cta-description">
+                Join our community and gain access to world-class resources,
+                expert instructors, and a path to achieving your goals. Don’t
+                wait—enroll now and take the first step!
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                class="cta-button"
+                >Apply Now</a
+              >
+            </div>
+          </div>
+
+          <!--
     #WHAT WE OFFER
     -->
 
-    <div class="what-we-offer">
-      <h2 class="section-header">What We Offer</h2>
-      <p class="section-txt">We are an accredited UK Register Of Learning Providers</p>
-      <div class="offer-cards">
-          <div class="ironman">
-              <div class="icon-container">
+          <div class="what-we-offer">
+            <h2 class="section-header">What We Offer</h2>
+            <p class="section-txt">
+              We are an accredited UK Register Of Learning Providers
+            </p>
+            <div class="offer-cards">
+              <div class="ironman">
+                <div class="icon-container">
                   <b class="iconn ion-md-school">1</b>
+                </div>
+                <h3 class="card-header">High-Quality Education</h3>
+                <p class="card-body">
+                  Our school provides top-notch education with experienced
+                  faculty and a comprehensive curriculum.
+                </p>
               </div>
-              <h3 class="card-header">High-Quality Education</h3>
-              <p class="card-body">Our school provides top-notch education with experienced faculty and a comprehensive curriculum.</p>
-          </div>
-  
-          <div class="captainamerica">
-              <div class="icon-container">
+
+              <div class="captainamerica">
+                <div class="icon-container">
                   <b class="iconn ion-md-chatbubbles">2</b>
+                </div>
+                <h3 class="card-header">Consultation</h3>
+                <p class="card-body">
+                  We offer tailored guidance and expert advice for academic and
+                  career success, providing information on universities, global
+                  rankings, and available scholarships.
+                </p>
               </div>
-              <h3 class="card-header">Consultation</h3>
-              <p class="card-body">We offer tailored guidance and expert advice for academic and career success, providing information on universities, global rankings, and available scholarships.</p>
-          </div>
-  
-          <div class="thor">
-              <div class="icon-container">
+
+              <div class="thor">
+                <div class="icon-container">
                   <b class="iconn ion-md-document">3</b>
+                </div>
+                <h3 class="card-header">Document Review</h3>
+                <p class="card-body">
+                  We share information on required documents, proofreading,
+                  editing, and providing feedback on essays, research papers,
+                  theses, and applications.
+                </p>
               </div>
-              <h3 class="card-header">Document Review</h3>
-              <p class="card-body">We share information on required documents, proofreading, editing, and providing feedback on essays, research papers, theses, and applications.</p>
-          </div>
-  
-          <div class="hulk">
-              <div class="icon-container">
+
+              <div class="hulk">
+                <div class="icon-container">
                   <b class="iconn ion-md-create">4</b>
+                </div>
+                <h3 class="card-header">School Application</h3>
+                <p class="card-body">
+                  You may request premium assistance to maximize your chances of
+                  being admitted to study your chosen course.
+                </p>
               </div>
-              <h3 class="card-header">School Application</h3>
-              <p class="card-body">You may request premium assistance to maximize your chances of being admitted to study your chosen course.</p>
-          </div>
-  
-          <div class="spiderman">
-              <div class="icon-container">
+
+              <div class="spiderman">
+                <div class="icon-container">
                   <b class="iconn ion-md-heart">5</b>
+                </div>
+                <h3 class="card-header">Guidance and Counseling</h3>
+                <p class="card-body">
+                  We support students in academic and personal development via
+                  one-on-one counseling sessions, workshops, and resources for
+                  mental health and success.
+                </p>
               </div>
-              <h3 class="card-header">Guidance and Counseling</h3>
-              <p class="card-body">We support students in academic and personal development via one-on-one counseling sessions, workshops, and resources for mental health and success.</p>
-          </div>
-  
-          <div class="blackwidow">
-              <div class="icon-container">
+
+              <div class="blackwidow">
+                <div class="icon-container">
                   <b class="iconn ion-md-people">6</b>
+                </div>
+                <h3 class="card-header">Community Engagement</h3>
+                <p class="card-body">
+                  Join a thriving community that supports collaboration,
+                  knowledge sharing, and networking opportunities.
+                </p>
               </div>
-              <h3 class="card-header">Community Engagement</h3>
-              <p class="card-body">Join a thriving community that supports collaboration, knowledge sharing, and networking opportunities.</p>
+            </div>
           </div>
-      </div>
-  </div>
 
+          <!-- STUDY PROGRAMS -->
+          <div class="study-options">
+            <div class="m">
+              <h2 class="section-title">Our Study Programs</h2>
+              <h3 class="section-subtitle" style="margin-bottom: 50px">
+                Explore our diverse range of academic programs designed to
+                prepare you for success.
+              </h3>
+            </div>
+            <div class="study-grid">
+              <div
+                class="science yell"
+                style="
+                  background-image: url(./assets/images/pexels-pixabay-256417.jpg);
+                "
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Learn English Language</h3>
+                  <p class="option-description">
+                    Learning English enhances communication skills, opens career
+                    opportunities, and enriches cultural understanding...
+                  </p>
+                </div>
+              </div>
+              <div
+                class="engineering yell"
+                style="background-image: url(thank.jpg)"
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Foundation</h3>
+                  <p class="option-description">
+                    Our Foundation program prepares students for higher
+                    education by building essential skills and knowledge...
+                  </p>
+                </div>
+              </div>
+              <div
+                class="arts yell"
+                style="
+                  background-image: url(./assets/images/pexels-olly-3768126.jpg);
+                "
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Undergraduate</h3>
+                  <p class="option-description">
+                    An Undergraduate program offers a degree in various fields,
+                    providing in-depth knowledge, critical thinking skills, and
+                    practical experience, ultimately preparing students for
+                    careers or further studies in their chosen area.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="business yell"
+                style="
+                  background-image: url(./assets/images/pexels-rdne-7713173.jpg);
+                "
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">HND Top-up</h3>
+                  <p class="option-description">
+                    An HND Top-Up program allows students with a Higher National
+                    Diploma to gain a full bachelor's degree by completing one
+                    additional year of study, focusing on advanced knowledge and
+                    skills.
+                  </p>
+                </div>
+              </div>
+              <div class="it yell" style="background-image: url(pix.jpg)">
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Pre Masters/Masters</h3>
+                  <p class="option-description">
+                    A Pre-Master's program prepares students for graduate-level
+                    study, enhancing academic skills, English proficiency, and
+                    subject knowledge to ensure a smooth transition into a
+                    master's degree.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="medicine yell"
+                style="
+                  background-image: url(./assets/images/pexels-karolina-grabowska-8106655.jpg);
+                "
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Postgraduate PhD/Research</h3>
+                  <p class="option-description">
+                    A Postgraduate PhD/Research program focuses on advanced,
+                    original research in a specialized field, leading to a
+                    doctoral degree. It involves independent study, thesis
+                    writing, and academic contributions to knowledge.
+                  </p>
+                </div>
+              </div>
+              <!-- Additional Study Program Cards -->
+              <div
+                class="law yell"
+                style="
+                  background-image: url(./assets/images/pexels-sora-shimazaki-5669619.jpg);
+                "
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Law</h3>
+                  <p class="option-description">
+                    Our Law program provides comprehensive legal training,
+                    critical thinking, and ethical reasoning skills, preparing
+                    students for legal practice or further specialization.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="business-management yell"
+                style="background-image: url(./assets/images/ruin.jpg)"
+              >
+                <div class="overlay"></div>
+                <div class="k">
+                  <h3 class="option-title">Business Management</h3>
+                  <p class="option-description">
+                    Business Management teaches strategic planning, operations,
+                    and leadership skills, equipping students for dynamic
+                    careers in business and management roles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <!-- STUDY PROGRAMS -->
-<div class="study-options">
-  <div class="m">
-    <h2 class="section-title">Our Study Programs</h2>
-    <h3 class="section-subtitle" style="margin-bottom: 50px;">Explore our diverse range of academic programs designed to prepare you for success.</h3>
-  </div>
-  <div class="study-grid">
-    <div class="science yell" style="background-image: url(./assets/images/pexels-pixabay-256417.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Learn English Language</h3>
-        <p class="option-description">Learning English enhances communication skills, opens career opportunities, and enriches cultural understanding...</p>
-      </div>
-    </div>
-    <div class="engineering yell" style="background-image: url(thank.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Foundation</h3>
-        <p class="option-description">Our Foundation program prepares students for higher education by building essential skills and knowledge...</p>
-      </div>
-    </div>
-    <div class="arts yell" style="background-image: url(./assets/images/pexels-olly-3768126.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Undergraduate</h3>
-        <p class="option-description">An Undergraduate program offers a degree in various fields, providing in-depth knowledge, critical thinking skills, and practical experience, ultimately preparing students for careers or further studies in their chosen area.</p>
-      </div>
-    </div>
-    <div class="business yell" style="background-image: url(./assets/images/pexels-rdne-7713173.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">HND Top-up</h3>
-        <p class="option-description">An HND Top-Up program allows students with a Higher National Diploma to gain a full bachelor's degree by completing one additional year of study, focusing on advanced knowledge and skills.</p>
-      </div>
-    </div>
-    <div class="it yell" style="background-image: url(pix.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Pre Masters/Masters</h3>
-        <p class="option-description">A Pre-Master's program prepares students for graduate-level study, enhancing academic skills, English proficiency, and subject knowledge to ensure a smooth transition into a master's degree.</p>
-      </div>
-    </div>
-    <div class="medicine yell" style="background-image: url(./assets/images/pexels-karolina-grabowska-8106655.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Postgraduate PhD/Research</h3>
-        <p class="option-description">A Postgraduate PhD/Research program focuses on advanced, original research in a specialized field, leading to a doctoral degree. It involves independent study, thesis writing, and academic contributions to knowledge.</p>
-      </div>
-    </div>
-    <!-- Additional Study Program Cards -->
-    <div class="law yell" style="background-image: url(./assets/images/pexels-sora-shimazaki-5669619.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Law</h3>
-        <p class="option-description">Our Law program provides comprehensive legal training, critical thinking, and ethical reasoning skills, preparing students for legal practice or further specialization.</p>
-      </div>
-    </div>
-    <div class="business-management yell" style="background-image: url(./assets/images/ruin.jpg);">
-      <div class="overlay"></div>
-      <div class="k">
-        <h3 class="option-title">Business Management</h3>
-        <p class="option-description">Business Management teaches strategic planning, operations, and leadership skills, equipping students for dynamic careers in business and management roles.</p>
-      </div>
-    </div>
-  </div>
-</div>
+          <!-- FILTER SECTION FOR MISSION AND VISION -->
+          <div class="filter-section">
+            <h2 class="section-tit">Our Focus</h2>
+            <div class="filter-buttons">
+              <button
+                class="filter-button active"
+                onclick="showContent('mission')"
+              >
+                Mission
+              </button>
+              <button class="filter-button" onclick="showContent('vision')">
+                Vision
+              </button>
+            </div>
 
-  <!-- FILTER SECTION FOR MISSION AND VISION -->
-<div class="filter-section">
-  <h2 class="section-tit">Our Focus</h2>
-  <div class="filter-buttons">
-    <button class="filter-button active" onclick="showContent('mission')">Mission</button>
-    <button class="filter-button" onclick="showContent('vision')">Vision</button>
-  </div>
+            <!-- Mission Content -->
+            <div id="mission" class="filter-content active">
+              <h3 class="filter-content-title">Our Mission</h3>
+              <p class="filter-content-description">
+                Our mission is to improve learners' experiences through
+                personalized academic program guidance, fostering
+                student-centered learning, and ensuring effective knowledge
+                transfer to help them achieve their goals.
+              </p>
+            </div>
 
-  <!-- Mission Content -->
-  <div id="mission" class="filter-content active">
-    <h3 class="filter-content-title">Our Mission</h3>
-    <p class="filter-content-description">
-      Our mission is to improve learners' experiences through personalized academic program guidance, fostering student-centered learning, and ensuring effective knowledge transfer to help them achieve their goals.
-    </p>
-  </div>
+            <!-- Vision Content -->
+            <div id="vision" class="filter-content">
+              <h3 class="filter-content-title">Our Vision</h3>
+              <p class="filter-content-description">
+                We aspire to become the leading global authority, providing
+                individuals with comprehensive and unparalleled support in
+                achieving their educational and talent development goals.
+              </p>
+            </div>
+          </div>
 
-  <!-- Vision Content -->
-  <div id="vision" class="filter-content">
-    <h3 class="filter-content-title">Our Vision</h3>
-    <p class="filter-content-description">
-      We aspire to become the leading global authority, providing individuals with comprehensive and unparalleled support in achieving their educational and talent development goals.
-    </p>
-  </div>
-</div>
-
-
-<!--
+          <!--
 #TEAM MEMBERS-->
-<section class="our-team">
+          <section class="our-team">
+            <div class="our-sponsor">
+              <h2 class="spon-header">Our Partners</h2>
+              <div class="spon-imgs">
+                <img
+                  loading="eager"
+                  src="assets/images/spon3.jpg"
+                  alt=""
+                  class="imgg"
+                />
+                <div
+                  class="imgg"
+                  style="
+                    background-color: #000;
+                    padding: 5px;
+                    border-radius: 10px;
+                  "
+                >
+                  <img
+                    loading="eager"
+                    src="assets/images/spon1.jpg"
+                    alt=""
+                    width="90%"
+                    height="90%"
+                  />
+                </div>
+                <img
+                  loading="eager"
+                  src="assets/images/spon2.jpg"
+                  alt=""
+                  class="imgg"
+                /><img
+                  loading="eager"
+                  src="assets/images/spon5.jpg"
+                  alt=""
+                  class="imgg"
+                />
+                <img
+                  loading="eager"
+                  src="assets/images/spon4.jpg"
+                  alt=""
+                  class="imgg"
+                />
+              </div>
+            </div>
+            <!-- <section class="courses-highlight">
+              <h2>Our Courses</h2>
+              <div class="course-option">
+                <div class="course-online">
+                  <h3>Online Courses</h3>
+                  <p>
+                    Learn at your own pace with a wide range of online courses
+                    accessible anytime, anywhere.
+                  </p>
+                  <a href="online-courses.html" class="view-more">View More</a>
+                </div>
+                <div class="course-offline">
+                  <h3>Offline Courses</h3>
+                  <p>
+                    Experience in-person learning with hands-on guidance in our
+                    physical locations.
+                  </p>
+                  <a href="offline-courses.html" class="view-more">View More</a>
+                </div>
+              </div>
+            </section> -->
+            <!-- <style>
+              .courses-highlight {
+                width: 100%;
+                text-align: left;
+                padding: 50px 0;
+                background: hsla(210, 79%, 15%, 0.945);
+              }
 
-  <div class="our-sponsor">
-    <h2 class="spon-header">Our Partners </h2>
-    <div class="spon-imgs">
-      
-      <img loading="eager" src="assets/images/spon3.jpg" alt="" class="imgg">
-      <div class="imgg" style="background-color: #000; padding: 5px; border-radius: 10px;"><img loading="eager" src="assets/images/spon1.jpg" alt="" width="90%" height="90%"></div>
-    <img loading="eager" src="assets/images/spon2.jpg" alt="" class="imgg"><img loading="eager" src="assets/images/spon5.jpg" alt="" class="imgg">
-    <img loading="eager" src="assets/images/spon4.jpg" alt="" class="imgg">
-    </div>
-  </div>
-  <section class="courses-highlight">
-    <h2>Our Courses</h2>
-    <div class="course-option">
-        <div class="course-online">
-            <h3>Online Courses</h3>
-            <p>Learn at your own pace with a wide range of online courses accessible anytime, anywhere.</p>
-            <a href="online-courses.html" class="view-more">View More</a>
-        </div>
-        <div class="course-offline">
-            <h3>Offline Courses</h3>
-            <p>Experience in-person learning with hands-on guidance in our physical locations.</p>
-            <a href="offline-courses.html" class="view-more">View More</a>
-        </div>
-    </div>
-</section>
-<style>
-  .courses-highlight {
-    width: 100%;
-    text-align: left;
-    padding: 50px 0;
-    background: hsla(210, 79%, 15%, 0.945);
-}
+              .course-option {
+                display: flex;
+                justify-content: space-evenly;
+              }
 
-.course-option {
-    display: flex;
-    justify-content: space-evenly;
-}
+              .course-online,
+              .course-offline {
+                border: 1px solid #ddd;
+                padding: 20px;
+                border-radius: 8px;
+                width: 400px;
+              }
 
-.course-online, .course-offline {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px;
-}
+              .view-more {
+                color: #007bff;
+                text-decoration: none;
+              }
 
-.view-more {
-    color: #007bff;
-    text-decoration: none;
-}
+              .view-more:hover {
+                text-decoration: underline;
+              }
+            </style> -->
 
-.view-more:hover {
-    text-decoration: underline;
-}
+            <h2 class="team-title">Meet Our Team</h2>
+            <div class="team-container">
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t1.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Daniel Vincent</h3>
+                  <p class="member-role">Managing Director</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t2.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Angel Uju</h3>
+                  <p class="member-role">Non - Executive Director</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t7.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Francisca Onwufuju</h3>
+                  <p class="member-role">Education Support Lead</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t4.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Jacinta Oseghale</h3>
+                  <p class="member-role">United States Coordinator</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t3.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Noel Kelechi</h3>
+                  <p class="member-role">IT Solution</p>
+                </div>
+              </div>
 
-</style>
+              <!-- <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/d2.JPG"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://web.facebook.com/profile.php?id=100089006016145"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.instagram.com/bi_tech2.0/"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/joshua-dickson-baa34a324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Josh Dickson</h3>
+                  <p class="member-role">Software Engineer</p>
+                </div>
+              </div> -->
+              <div class="team-member">
+                <div class="team-image-container">
+                  <img
+                    loading="eager"
+                    src="assets/images/t8.jpg"
+                    alt="Team Member 1"
+                    class="team-image"
+                  />
+                  <div class="social-icons">
+                    <a
+                      href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-facebook"></ion-icon
+                    ></a>
+                    <a
+                      href="http://www.instagram.com/goldengosheneducation"
+                      class="icon-link"
+                      ><ion-icon name="logo-instagram"></ion-icon
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                      class="icon-link"
+                      ><ion-icon name="logo-linkedin"></ion-icon
+                    ></a>
+                  </div>
+                </div>
+                <div class="up">
+                  <h3 class="member-name">Xinia James</h3>
+                  <p class="member-role">legal team</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-  <h2 class="team-title">Meet Our Team</h2>
-  <div class="team-container">
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t1.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Daniel Vincent</h3>
-      <p class="member-role">Managing Director</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t2.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Angel Uju</h3>
-      <p class="member-role">Non - Executive Director</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t7.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Francisca Onwufuju
-          
-          </h3>
-      <p class="member-role">Education Support Lead</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t4.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Jacinta Oseghale
-        </h3>
-      <p class="member-role">United States Coordinator</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t3.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Noel Kelechi
-          </h3>
-      <p class="member-role">IT Solution</p>
-      </div>
-    </div>
-    
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/d2.JPG" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://web.facebook.com/profile.php?id=100089006016145" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="https://www.instagram.com/bi_tech2.0/" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/in/joshua-dickson-baa34a324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Josh Dickson</h3>
-      <p class="member-role">Software Engineer</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-image-container">
-        <img loading="eager" src="assets/images/t8.jpg" alt="Team Member 1" class="team-image">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-facebook"></ion-icon></a>
-          <a href="http://www.instagram.com/goldengosheneducation" class="icon-link"><ion-icon name="logo-instagram"></ion-icon></a>
-          <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="icon-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
-      </div>
-      <div class="up">
-        <h3 class="member-name">Xinia James 
-          
-          </h3>
-      <p class="member-role">legal team</p>
-      </div>
-    </div>
-  </div>
-</section>
+          <!-- CTA SECTION White -->
+          <div class="cta-section-w">
+            <div class="cta-content-w">
+              <h2 class="cta-title-w">Ready to Start Your Learning Journey?</h2>
+              <p class="cta-description-w">
+                Join our community and gain access to world-class resources,
+                expert instructors, and a path to achieving your goals. Don’t
+                wait—enroll now and take the first step!
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                class="cta-button-w"
+                >Apply Now</a
+              >
+            </div>
+          </div>
 
+          <script>
+            // JavaScript to handle filter toggle
+            function showContent(contentId) {
+              // Hide all content sections
+              document
+                .querySelectorAll(".filter-content")
+                .forEach((content) => {
+                  content.classList.remove("active");
+                });
+              // Remove active class from all buttons
+              document.querySelectorAll(".filter-button").forEach((button) => {
+                button.classList.remove("active");
+              });
+              // Show the selected content section
+              document.getElementById(contentId).classList.add("active");
+              // Add active class to the clicked button
+              document
+                .querySelector(`[onclick="showContent('${contentId}')"]`)
+                .classList.add("active");
+            }
+          </script>
+          <!-- FAQ SECTION -->
+          <div class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
 
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(1)">
+                What are the entry requirements for international students?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-1">
+                <p>
+                  The entry requirements vary by university and course but
+                  typically include academic qualifications, English language
+                  proficiency (such as IELTS or TOEFL scores), and sometimes a
+                  personal statement or interview.
+                </p>
+              </div>
+            </div>
 
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(2)">
+                How do I apply for a student visa?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-2">
+                <p>
+                  International students must apply for a Tier 4 (General)
+                  student visa. To do this, you need to have an acceptance
+                  letter from a UK institution, proof of sufficient funds to
+                  cover tuition and living expenses, and health insurance.
+                </p>
+              </div>
+            </div>
 
-<!-- CTA SECTION White -->
-<div class="cta-section-w">
-  <div class="cta-content-w">
-    <h2 class="cta-title-w">Ready to Start Your Learning Journey?</h2>
-    <p class="cta-description-w">Join our community and gain access to world-class resources, expert instructors, and a path to achieving your goals. Don’t wait—enroll now and take the first step!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="cta-button-w">Apply Now</a>
-  </div>
-</div>
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(3)">
+                What are the tuition fees for international students?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-3">
+                <p>
+                  Tuition fees for international students can range from £10,000
+                  to £38,000 per year, depending on the course and university.
+                  It's essential to check the specific fees of the institution
+                  you are interested in.
+                </p>
+              </div>
+            </div>
 
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(4)">
+                Can I work while studying Abroad?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-4">
+                <p>
+                  Yes, international students are allowed to work part-time
+                  during their studies, typically up to 20 hours per week during
+                  term time and full-time during holidays. However, it's
+                  important to check the specific conditions of your visa.
+                </p>
+              </div>
+            </div>
 
-<script>
-  // JavaScript to handle filter toggle
-  function showContent(contentId) {
-    // Hide all content sections
-    document.querySelectorAll('.filter-content').forEach(content => {
-      content.classList.remove('active');
-    });
-    // Remove active class from all buttons
-    document.querySelectorAll('.filter-button').forEach(button => {
-      button.classList.remove('active');
-    });
-    // Show the selected content section
-    document.getElementById(contentId).classList.add('active');
-    // Add active class to the clicked button
-    document.querySelector(`[onclick="showContent('${contentId}')"]`).classList.add('active');
-  }
-</script>
-<!-- FAQ SECTION -->
-<div class="faq-section">
-  <h2 class="section-title">Frequently Asked Questions</h2>
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(5)">
+                How can I open a bank account Abroad?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-5">
+                <p>
+                  To open a bank account, you typically need to provide proof of
+                  identity (passport), proof of address (such as a utility
+                  bill), and a student enrollment letter. Different banks may
+                  have varying requirements, so its best to check ahead.
+                </p>
+              </div>
+            </div>
 
-  <!-- FAQ Item 1 -->
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(1)">
-      What are the entry requirements for international students?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-1">
-      <p>The entry requirements vary by university and course but typically include academic qualifications, English language proficiency (such as IELTS or TOEFL scores), and sometimes a personal statement or interview. </p>
-    </div>
-  </div>
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(6)">
+                What are the living costs Abroad?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-6">
+                <p>
+                  Living costs vary depending on the city, but students should
+                  budget between £9,000 to £12,000 per year for accommodation,
+                  food, transportation, and other expenses.
+                </p>
+              </div>
+            </div>
 
-  <!-- FAQ Item 2 -->
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(2)">
-      How do I apply for a student visa?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-2">
-      <p>International students must apply for a Tier 4 (General) student visa. To do this, you need to have an acceptance letter from a UK institution, proof of sufficient funds to cover tuition and living expenses, and health insurance. </p>
-    </div>
-  </div>
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(7)">
+                How do I find accommodation?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-7">
+                <p>
+                  Universities often provide accommodation options for
+                  international students, including halls of residence and
+                  shared houses. Alternatively, students can search for private
+                  rentals through various online platforms.
+                </p>
+              </div>
+            </div>
 
-  <!-- FAQ Item 3 -->
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(3)">
-      What are the tuition fees for international students?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-3">
-      <p>Tuition fees for international students can range from £10,000 to £38,000 per year, depending on the course and university. It's essential to check the specific fees of the institution you are interested in.</p>
-    </div>
-  </div>
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(8)">
+                Healthcare services are available to international students?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-8">
+                <p>
+                  International students Abroad can access the National Health
+                  Service (NHS) by paying an immigration health surcharge as
+                  part of their visa application. This allows them to receive
+                  medical treatment at the same cost as UK residents.
+                </p>
+              </div>
+            </div>
 
-    <!-- FAQ Item 4 -->
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleAnswer(4)">
-        Can I work while studying Abroad?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-answer" id="answer-4">
-        <p>Yes, international students are allowed to work part-time during their studies, typically up to 20 hours per week during term time and full-time during holidays. However, it's important to check the specific conditions of your visa.</p>
-      </div>
-    </div>
-  
-    <!-- FAQ Item 5 -->
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleAnswer(5)">
-        How can I open a bank account Abroad?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-answer" id="answer-5">
-        <p>To open a bank account, you typically need to provide proof of identity (passport), proof of address (such as a utility bill), and a student enrollment letter. Different banks may have varying requirements, so its best to check ahead. </p>
-      </div>
-    </div>
+            <!-- FAQ Item 9 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(9)">
+                What support services are available for international students?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-9">
+                <p>
+                  Most universities offer support services, including
+                  orientation programs, counseling, academic assistance, and
+                  social events to help international students adjust to life
+                  Abroad.
+                </p>
+              </div>
+            </div>
 
-      <!-- FAQ Item 6 --> 
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(6)">
-      What are the living costs Abroad?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-6">
-      <p>Living costs vary depending on the city, but students should budget between £9,000 to £12,000 per year for accommodation, food, transportation, and other expenses.</p>
-    </div>
-  </div>
+            <!-- FAQ Item 10 -->
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleAnswer(10)">
+                What should I do in case of an emergency?
+                <span class="icon">+</span>
+              </button>
+              <div class="faq-answer" id="answer-10">
+                <p>
+                  In case of an emergency, you can call 999 for police, fire, or
+                  ambulance services. Universities also have emergency contacts
+                  and support services available for students. These FAQs can
+                  help guide international students as they prepare for their
+                  educational journey Abroad, ensuring they are well-informed
+                  and ready for the experience ahead.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <!-- FAQ Item 7 -->
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(7)">
-      How do I find accommodation?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-7">
-      <p>Universities often provide accommodation options for international students, including halls of residence and shared houses. Alternatively, students can search for private rentals through various online platforms.</p>
-    </div>
-  </div>
+          <script>
+            // JavaScript function to toggle FAQ answers
+            function toggleAnswer(answerId) {
+              const answer = document.getElementById(`answer-${answerId}`);
+              const questionButton = answer.previousElementSibling;
 
-    <!-- FAQ Item 8 -->
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleAnswer(8)">
-        Healthcare services are available to international students?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-answer" id="answer-8">
-        <p>International students Abroad can access the National Health Service (NHS) by paying an immigration health surcharge as part of their visa application. This allows them to receive medical treatment at the same cost as UK residents.</p>
-      </div>
-    </div>
-  
-    <!-- FAQ Item 9 -->
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleAnswer(9)">
-        What support services are available for international students?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-answer" id="answer-9">
-        <p>Most universities offer support services, including orientation programs, counseling, academic assistance, and social events to help international students adjust to life Abroad. </p>
-      </div>
-    </div>
+              // Toggle display and button active state
+              answer.style.display =
+                answer.style.display === "block" ? "none" : "block";
+              questionButton.classList.toggle("active");
+            }
+          </script>
 
-      <!-- FAQ Item 10 -->
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(10)">
-      What should I do in case of an emergency?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer" id="answer-10">
-      <p>In case of an emergency, you can call 999 for police, fire, or ambulance services. Universities also have emergency contacts and support services available for students. These FAQs can help guide international students as they prepare for their educational journey Abroad, ensuring they are well-informed and ready for the experience ahead.</p>
-    </div>
-  </div>
+          <br /><br />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.667096315396!2d-1.5528645!3d53.802658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1a1f437d8b%3A0xf6b2d253f95a0af0!2sUniversity%20Business%20Centre%20-%20Leeds%2C%20The%20Rose%20Bowl%2C%20148%20Portland%20Crescent%2C%20Leeds%20LS1%203HB%2C%20UK!5e0!3m2!1sen!2suk!4v1698575762345!5m2!1sen!2suk"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            style="margin-top: 30px"
+          >
+          </iframe>
+          <!-- CONTACT US SECTION -->
+          <section class="contact-us-section">
+            <h2 class="contact-title">Get in Touch with Us</h2>
+            <div class="contact-container">
+              <!-- Contact Info Section -->
+              <div class="contact-info-container">
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p>+44 20 1234 5678</p>
+                  </div>
+                  <div class="contact-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p>info@ourcompany.com</p>
+                  </div>
+                  <div class="contact-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p>148 Rose Bowl, Portland Crescent, Leeds, LS1 3HB, UK</p>
+                  </div>
+                </div>
+              </div>
 
-</div>
+              <!-- Form Section -->
+              <div class="contact-form-container">
+                <form class="contact-form" id="contact-form">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
 
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
 
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
 
-<script>
-  // JavaScript function to toggle FAQ answers
-  function toggleAnswer(answerId) {
-    const answer = document.getElementById(`answer-${answerId}`);
-    const questionButton = answer.previousElementSibling;
+                  <button class="contact-submit-button">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
 
-    // Toggle display and button active state
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    questionButton.classList.toggle('active');
-  }
-</script>
-
-
-
-<br><br>
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.667096315396!2d-1.5528645!3d53.802658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1a1f437d8b%3A0xf6b2d253f95a0af0!2sUniversity%20Business%20Centre%20-%20Leeds%2C%20The%20Rose%20Bowl%2C%20148%20Portland%20Crescent%2C%20Leeds%20LS1%203HB%2C%20UK!5e0!3m2!1sen!2suk!4v1698575762345!5m2!1sen!2suk" 
-  width="100%" 
-  height="350" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade"
-  style="margin-top: 30px;">
-</iframe>
-<!-- CONTACT US SECTION -->
-<section class="contact-us-section">
-  <h2 class="contact-title">Get in Touch with Us</h2>
-  <div class="contact-container">
-    
-    <!-- Contact Info Section -->
-    <div class="contact-info-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <ion-icon name="call-outline"></ion-icon>
-          <p>+44 20 1234 5678</p>
-        </div>
-        <div class="contact-item">
-          <ion-icon name="mail-outline"></ion-icon>
-          <p>info@ourcompany.com</p>
-        </div>
-        <div class="contact-item">
-          <ion-icon name="location-outline"></ion-icon>
-          <p>148 Rose Bowl, Portland Crescent, Leeds, LS1 3HB, UK</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Form Section -->
-    <div class="contact-form-container">
-      <form class="contact-form" action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        
-        <button type="submit" class="contact-submit-button">Send Message</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-
-
-    </article>
-  </main>
-
-
-
-  <!-- 
+      <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-top section">
-
-        <div class="footer-brand" style="max-width: 300px;">
-
-          <p class="footer-list-title" style="justify-content: flex-start;display: flex;text-align: center;align-content:flex-start;"><img loading="eager" src="GG LOGO.png" alt="" style="width: 70px; height: auto;"><b class="io" style="margin-top: 5%; margin-left: 10px;">G.G.E.C.L</b></p>
-
-          <p class="footer-text">
-            Begin your study abroad journey with ease—secure, reliable, and tailored support every step of the way.
-        </p>
-        
-
-          <ul class="social-list">
-
-            <li>
-              <a href="https://www.linkedin.com/company/goldengosheneducationalconsultancy" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.x.com/goldengoshenedu" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.facebook.com/goldengosheneducationalconsultancy" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="http://www.instagram.com/goldengosheneducation" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-        
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Usefull Links</p>
-          </li>
-
-          <li>
-            <a href="about.html" class="footer-link">About us</a>
-          </li>
-
-          <li>
-            <a href="service.html" class="footer-link">Services</a>
-          </li>
-
-          <li>
-            <a href="course.html" class="footer-link">Courses</a>
-          </li>
-
-
-          <li>
-            <a href="terms.html" class="footer-link">Terms & Services</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Community</p>
-          </li>
-
-          <li>
-            <a href="faq.html" class="footer-link">FAQs</a>
-          </li>
-
-          <li>
-            <a href="live.html" class="footer-link">Call us now</a>
-          </li>
-
-          <li>
-            <a href="work.html" class="footer-link">Work hours</a>
-          </li>
-
-          <li>
-            <a href="blog.html" class="footer-link">Blog</a>
-          </li>
-
-        </ul>
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Location</p>
-          </li>
-            <p class="dev">University Business Centre- Leeds,
-              148 Rose Bowl, Portland Crescent,
-              LS1 3HB Leeds, United Kingdom.
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top section">
+            <div class="footer-brand" style="max-width: 300px">
+              <p
+                class="footer-list-title"
+                style="
+                  justify-content: flex-start;
+                  display: flex;
+                  text-align: center;
+                  align-content: flex-start;
+                "
+              >
+                <img
+                  loading="eager"
+                  src="GG LOGO.png"
+                  alt=""
+                  style="width: 70px; height: auto"
+                /><b class="io" style="margin-top: 5%; margin-left: 10px"
+                  >G.G.E.C.L</b
+                >
               </p>
 
-        </ul>
-        <ul class="footer-list">
+              <p class="footer-text">
+                Begin your study abroad journey with ease—secure, reliable, and
+                tailored support every step of the way.
+              </p>
 
-          <li>
-            <p class="footer-list-title">Instagram post</p>
-          </li>
-
-          <li>
-            <ul class="insta-post">
-
-              <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i1.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+              <ul class="social-list">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/goldengosheneducationalconsultancy"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
+                </li>
 
-                </div>
+                <li>
+                  <a
+                    href="https://www.x.com/goldengoshenedu"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.facebook.com/goldengosheneducationalconsultancy"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="http://www.instagram.com/goldengosheneducation"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Usefull Links</p>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i2.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="about.html" class="footer-link">About us</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i3.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="service.html" class="footer-link">Services</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i4.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="course.html" class="footer-link">Courses</a>
               </li>
 
               <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i5.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
+                <a href="terms.html" class="footer-link">Terms & Services</a>
               </li>
-
-              <li>
-                <div class="insta-card">
-
-                  <figure class="post-banner">
-                    <img loading="eager" src="./assets/images/i6.jpg" width="77" height="63" loading="lazy"
-                      alt="instagram post" class="img-cover">
-                  </figure>
-
-                  <a href="http://www.instagram.com/goldengosheneducation" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
-              </li>
-
             </ul>
-          </li>
 
-        </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Community</p>
+              </li>
 
-      </div>
-      <hr style="border: 1px solid rgb(127, 138, 255);">
+              <li>
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
 
-      <div class="footer-bottom" style="display: flex;justify-content: space-between;">
+              <li>
+                <a href="live.html" class="footer-link">Call us now</a>
+              </li>
 
-        <p class="copyright">
-          &copy; 2024 G.G.E.C.L All Rights Reserved by BiTech
-        </p>
+              <li>
+                <a href="work.html" class="footer-link">Work hours</a>
+              </li>
 
-        <ul class="footer-bottom-list">
+              <li>
+                <a href="blog.html" class="footer-link">Blog</a>
+              </li>
+            </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Location</p>
+              </li>
+              <p class="dev">
+                University Business Centre- Leeds, 148 Rose Bowl, Portland
+                Crescent, LS1 3HB Leeds, United Kingdom.
+              </p>
+            </ul>
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Instagram post</p>
+              </li>
 
-          <li>
-            <a href="terms.html" class="footer-bottom-link">Terms and conditions</a>
-          </li>
+              <li>
+                <ul class="insta-post">
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i1.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
-          <li>
-            <a href="privacy.html" class="footer-bottom-link">Privacy policy</a>
-          </li>
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
 
-          <li>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform" class="footer-bottom-link">Login / Signup</a>
-          </li>
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i2.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
-        </ul>
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
 
-      </div>
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i3.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
 
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i4.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i5.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="insta-card">
+                      <figure class="post-banner">
+                        <img
+                          loading="eager"
+                          src="./assets/images/i6.jpg"
+                          width="77"
+                          height="63"
+                          loading="lazy"
+                          alt="instagram post"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <a
+                        href="http://www.instagram.com/goldengosheneducation"
+                        class="card-content"
+                      >
+                        <ion-icon
+                          name="logo-instagram"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <hr style="border: 1px solid rgb(127, 138, 255)" />
+
+          <div
+            class="footer-bottom"
+            style="display: flex; justify-content: space-between"
+          >
+            <p class="copyright">
+              &copy; 2024 G.G.E.C.L All Rights Reserved by BiTech
+            </p>
+
+            <ul class="footer-bottom-list">
+              <li>
+                <a href="terms.html" class="footer-bottom-link"
+                  >Terms and conditions</a
+                >
+              </li>
+
+              <li>
+                <a href="privacy.html" class="footer-bottom-link"
+                  >Privacy policy</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdYbDNQn9zYvD0GQFNPI3HDEBchzR0H39IeFzW2JSuUuQOh7w/viewform"
+                  class="footer-bottom-link"
+                  >Login / Signup</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
-</div>
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
-  <!-- 
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

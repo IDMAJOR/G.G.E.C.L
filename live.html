@@ -63,15 +63,27 @@
 
       <div class="ven" id="ven">
         <button class="close-btn" id="closeBtn">&times;</button>
-        <div class="in">
-          <input
-            type="text"
-            name=""
-            id=""
-            class="inp"
-            placeholder="Search here"
-          />
-          <button class="btn" type="submit">Search</button>
+        <div style="width: 100%; display: grid; place-items: center">
+          <div class="in">
+            <input
+              type="text"
+              name=""
+              id="ven-search"
+              class="inp"
+              placeholder="Search here"
+            />
+            <button class="btn" type="submit" id="sch">Search</button>
+          </div>
+          <!-- The search output below, just style -->
+          <div
+            id="show-search"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          ></div>
         </div>
       </div>
 
@@ -164,8 +176,8 @@
                 </li>
 
                 <li>
-                  <a href="courses.html" class="navbar-link" data-nav-link
-                    >Courses</a
+                  <a href="live.html" class="navbar-link" data-nav-link
+                    >Live chat</a
                   >
                 </li>
 
